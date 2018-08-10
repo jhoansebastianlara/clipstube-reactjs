@@ -1,0 +1,23 @@
+.truncate-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.btn-default {
+  border: none;
+  border-radius: .25em;
+  margin: 0;
+  font-weight: 600;
+  max-width: 100%;
+}
+
+.btn-small {
+  @extend .btn-default;
+  background-color: color(primary);
+  padding: .5em .9rem;
+  color: white;
+  font-size: .8rem;
+  cursor: pointer;
+  font-family: 'robotolight';
+}

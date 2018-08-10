@@ -1,0 +1,12 @@
+$colors: (
+  primary: #105CDE,
+  secondary: #FE3976,
+  danger: #E74C3C,
+  alert: #E67E22,
+  whitefresh: #FAFAFA
+);
+
+// retrieve color from $colors map ie. `color(primary)`
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

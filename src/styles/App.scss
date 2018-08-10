@@ -1,0 +1,27 @@
+@import "styles/fonts";
+@import "styles/variables";
+@import "styles/shared";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'robotoregular';
+  background-color: color(whitefresh);
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  grid-row-gap: 1.5rem;
+
+  .App-container {
+    display: grid;
+    grid-template-columns: minmax(auto, $break-large);
+    justify-content: center;
+  }
+}

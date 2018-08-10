@@ -1,0 +1,11 @@
+.Controls {
+  display: flex;
+  position: absolute;
+  background: rgba(0, 0, 0, .7);
+  bottom: .8rem;
+  left: .8rem;
+  right: .8rem;
+  z-index: 2;
+  border-radius: 1.2rem;
+  padding: 0 .8rem;
+}

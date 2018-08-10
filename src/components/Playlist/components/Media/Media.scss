@@ -1,0 +1,54 @@
+@import "styles/variables";
+
+.Media {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+
+  .Media-overlay {
+    background: rgba(0,0,0, .3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover .Media-overlay {
+    display: flex;
+  }
+
+  .Media-cover-image {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  .Media-title-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3.2rem;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem 1rem;
+    width: 100%;
+  }
+
+  .Media-title {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    display: block;
+    font-family: 'robotolight';
+
+    @media screen and (max-width: $break-medium) {
+      font-size: 1rem;
+    }
+  }
+}

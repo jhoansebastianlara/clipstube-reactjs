@@ -1,0 +1,29 @@
+{
+  "playlist": [
+    {
+      "id": "1",
+      "title": "Esto es un titulo muy largo de video que posiblemente suban aca",
+      "videoUrl": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+    },
+    {
+      "id": "2",
+      "title": "Video two test",
+      "videoUrl": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+    },
+    {
+      "id": "3",
+      "title": "Video three test",
+      "videoUrl": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+    },
+    {
+      "id": "4",
+      "title": "Video four test",
+      "videoUrl": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+    },
+    {
+      "id": "5",
+      "title": "Video five test",
+      "videoUrl": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+    }
+  ]
+}
