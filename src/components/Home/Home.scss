@@ -1,39 +1,4 @@
 .Home {
   display: grid;
   grid-template-columns: 1fr;
-  // min-height: 100vh;
-  // display: grid;
-  // grid-template: 1fr minmax(8rem, 35vw);
-  // grid-template-areas: "header header"
-  //                      "player videoclips"
-  //                      "playlist playlist";
-  // grid-gap: 1rem 2rem;
-
-  // @media screen and (max-width: $break-medium) {
-  //   grid-template-columns: 1fr minmax(8rem, 45vw);
-  //   grid-gap: 1rem .5rem;
-  // }
-  //
-  // @media screen and (max-width: $break-small) {
-  //   grid-template-columns: 1fr;
-  //   grid-template-areas: "header"
-  //                        "player"
-  //                        "videoclips"
-  //                        "playlist";
-  // }
 }
-
-// .Header {
-//   grid-area: header;
-// }
-//
-// .Player {
-//   grid-area: player;
-//
-// }
-//
-// .Videoclips {
-//   grid-area: videoclips;
-//
-// }
-//

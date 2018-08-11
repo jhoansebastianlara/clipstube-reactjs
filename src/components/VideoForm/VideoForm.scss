@@ -1,0 +1,22 @@
+.VideoForm {
+  display: flex;
+  flex-direction: column;
+
+  .VideoForm-title {
+    margin: 0;
+    align-self: center;
+  }
+
+  label {
+    color: gray;
+    font-family: 'robotolight';
+
+    input {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .VideoForm-submit-button {
+    align-self: center;
+  }
+}

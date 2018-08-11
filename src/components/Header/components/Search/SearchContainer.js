@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from '../../../../actions'
 import Search from './Search'
 
 class SearchContainer extends Component {
@@ -13,13 +15,7 @@ class SearchContainer extends Component {
 
   doSearch = () => {
     const searchText = (this.input.value || '').trim()
-    console.log(searchText)
-    this.props.dispatch({
-      type: 'SEARCH_VIDEO',
-      payload: {
-        searchText
-      }
-    })
+    this.props.actions.searchVideos(searchText)
   }
 
   handleInputChange = event => {
@@ -44,4 +40,10 @@ class SearchContainer extends Component {
   }
 }
 
-export default connect()(SearchContainer)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  }
+}
+
+export default connect(null, mapDispatchToProps)(SearchContainer)

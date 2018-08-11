@@ -1,0 +1,43 @@
+@import "styles/variables";
+
+.Modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .4);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Modal {
+  max-width: $break-medium;
+  width: 90%;
+  top: 6rem;
+  background:  white;
+  padding: 1.4rem;
+  border-radius: .1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
+  position: relative;
+
+  .Modal-close {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    border-radius: 50%;
+    border: none;
+    background: #171c30;
+    color: white;
+    cursor: pointer;
+  }
+
+  .Modal-close:after {
+    content: "X";
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}

@@ -1,5 +1,42 @@
 {
-  "playlist": [
+  "playlist": {
+    "1": {
+      "id": "1",
+      "title": "Sintel Trailer",
+      "videoUrl": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      "clips": ["123", "456"]
+    },
+    "2": {
+      "id": "2",
+      "title": "Sintel Trailer [Part 2]",
+      "videoUrl": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      "clips": ["789"]
+    }
+  },
+  "clips": {
+    "123": {
+      "id": "123",
+      "videoId": "1",
+      "name": "clip uno",
+      "startTime": "00:10",
+      "endTime": "00:15"
+    },
+    "456": {
+      "id": "456",
+      "videoId": "1",
+      "name": "clip uno [part 2]",
+      "startTime": "00:20",
+      "endTime": "00:25"
+    },
+    "789": {
+      "id": "789",
+      "videoId": "2",
+      "name": "testing",
+      "startTime": "00:12",
+      "endTime": "00:18"
+    }
+  },
+  "playlist_": [
     {
       "id": "1",
       "title": "Esto es un titulo muy largo de video que posiblemente suban aca",

@@ -10,6 +10,13 @@
   margin: 0;
   font-weight: 600;
   max-width: 100%;
+
+  &:disabled,
+  &[disabled]{
+    background-color: #cccccc;
+    color: #666666;
+    cursor: progress;
+  }
 }
 
 .btn-small {

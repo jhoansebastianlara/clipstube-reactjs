@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
-// import data from '../../data.json'
 import { connect } from 'react-redux'
 import Home from './Home'
 import Playlist from '../Playlist'
 
 class HomeContainter extends Component {
   render () {
+    const {
+      searchText,
+      searchResults,
+      playlist
+    } = this.props
+    const list = searchText ? searchResults : playlist
     return (
       <Home>
-        {
-          this.props.searchText ? (
-            <Playlist playlist={this.props.search} />
-          ) : (
-            <Playlist playlist={this.props.playlist} />
-          )
-        }
+        <Playlist playlist={list} />
       </Home>
     )
   }
@@ -22,9 +21,9 @@ class HomeContainter extends Component {
 
 const mapStateToProps = (state, props) => {
   return {
-    playlist: state.data.playlist,
-    search: state.search,
-    searchText: state.searchText
+    playlist: state.data.playlistArray,
+    searchResults: state.data.searchResults,
+    searchText: state.data.searchText
   }
 }
 
