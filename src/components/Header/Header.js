@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Search from './components/Search'
 import './Header.css'
 
 function Header(props) {
@@ -12,8 +13,11 @@ function Header(props) {
         <span>You</span>
         <span>Clips</span>
       </NavLink>
+
+      <Search />
+
       <div className="body">
-        <button className="btn-small">Create a video</button>
+        <button className="btn-small">+</button>
       </div>
     </div>
   )

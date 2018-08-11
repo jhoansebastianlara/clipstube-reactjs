@@ -1,0 +1,9 @@
+.Search {
+  width: 100%;
+  max-width: 30rem;
+  padding: 0 1rem;
+
+  .Search-input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  }
+}
