@@ -1,1 +1,1 @@
-export {default} from './VideoClips'
+export {default} from './VideoClipsContainer'

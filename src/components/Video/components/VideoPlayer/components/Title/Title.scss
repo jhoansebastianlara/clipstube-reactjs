@@ -1,15 +1,17 @@
 .Title {
   position: absolute;
-  top: 1rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  background: rgba(0, 0, 0, .5);
-  color: white;
-  padding: .5rem 1rem;
+  top: 100%;
+  // left: 1.5rem;
+  // right: 1.5rem;
+  // background: rgba(0, 0, 0, .5);
+  // color: white;
+  padding: 1rem 0;
 
   h2 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: normal;
+    font-family: 'robotomedium';
+    line-height: 1.6rem;
   }
 }

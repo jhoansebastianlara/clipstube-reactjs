@@ -4,7 +4,7 @@ import './VideoClips.css'
 function VideoClips(props) {
   return (
     <div className="VideoClips">
-      VideoClips
+      {props.children}
     </div>
   )
 }

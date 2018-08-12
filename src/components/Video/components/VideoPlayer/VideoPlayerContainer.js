@@ -24,27 +24,18 @@ class VideoPlayerContainter extends Component {
     })
   }
 
-  componentDidMount() {
+  handleLoadedMetadata = event => {
+    this.video = event.target
     this.setState({
+      duration: this.video.duration,
       pause: (!this.props.autoplay)
     })
   }
 
-  handleLoadedMetadata = event => {
-    this.video = event.target
-    this.setState({
-      duration: this.video.duration
-    })
-  }
-
   handleTimeUpdate = event => {
-    this.setState({
+    this.video && this.setState({
       currentTime: this.video.currentTime
     })
-  }
-
-  handleProgressChange = event => {
-    this.video.currentTime = event.target.value
   }
 
   handleSeeking = event => {
@@ -57,6 +48,16 @@ class VideoPlayerContainter extends Component {
     this.setState({
       loading: false
     })
+  }
+
+  handlePause = event => {
+    this.setState({
+      pause: true
+    })
+  }
+
+  handleProgressChange = event => {
+    this.video.currentTime = event.target.value
   }
 
   handleVolumeChange = event => {
@@ -75,14 +76,34 @@ class VideoPlayerContainter extends Component {
     this.player = element
   }
 
+  // lifecycle
+
+  componentWillReceiveProps (nextProps) {
+    const currentVideoClip = this.props.videoClip
+    const newVideoClip = nextProps.videoClip
+    if (currentVideoClip.id &&
+      currentVideoClip.id !== newVideoClip.id) {
+      this.setState({
+        pause: (!this.props.autoplay)
+      })
+    }
+  }
+
   render () {
+    const {videoClip} = this.props
+    let title = this.props.data.title
+    let videoSrc = this.props.data.src
+
+    // if there is videoClip, so load it's data
+    if (videoClip.id) {
+      title += ` [${videoClip.name}]`
+      videoSrc += `#t=${videoClip.startTime},${videoClip.endTime}`
+    }
+
     return (
       <VideoPlayer
         setRef={this.setRef}
       >
-        <Title
-          title={this.props.title}
-        />
         <Controls>
           <PlayPause
             pause={this.state.pause}
@@ -116,7 +137,12 @@ class VideoPlayerContainter extends Component {
           handleTimeUpdate={this.handleTimeUpdate}
           handleSeeking={this.handleSeeking}
           handleSeeked={this.handleSeeked}
-          src={this.props.src}
+          handlePause={this.handlePause}
+          src={videoSrc}
+        />
+
+        <Title
+          title={title}
         />
       </VideoPlayer>
     )

@@ -38,7 +38,7 @@ class HeaderContainter extends Component {
             className="btn-small"
             onClick={this.handleOpenModal}
           >
-            +
+            New
           </button>
           {
             this.props.modalVisible &&

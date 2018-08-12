@@ -17,7 +17,6 @@ class VideoFormContainer extends Component {
   }
 
   saveForm = () => {
-    console.log('saveForm')
     setTimeout(() => {
       this.setState({
         loading: false

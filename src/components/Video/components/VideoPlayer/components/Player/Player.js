@@ -7,6 +7,7 @@ class Player extends Component {
   }
 
   togglePlay() {
+    if (!this.video) return
     if (this.props.pause) {
       this.video.play()
     } else {
@@ -30,8 +31,8 @@ class Player extends Component {
       handleTimeUpdate,
       handleSeeking,
       handleSeeked,
+      handlePause
     } = this.props
-
     return (
       <div className="Player">
         <video
@@ -42,6 +43,7 @@ class Player extends Component {
           onTimeUpdate={handleTimeUpdate}
           onSeeking={handleSeeking}
           onSeeked={handleSeeked}
+          onPause={handlePause}
         />
       </div>
     )
