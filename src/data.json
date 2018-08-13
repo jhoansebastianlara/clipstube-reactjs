@@ -3,7 +3,8 @@
     "1": {
       "id": "1",
       "title": "Sintel Trailer",
-      "src": "http://mazwai.com/system/posts/videos/000/000/225/original/andrew-arthur-breese_boneyard-raw-broll.mp4",
+      "src": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      "src2": "http://mazwai.com/system/posts/videos/000/000/225/original/andrew-arthur-breese_boneyard-raw-broll.mp4",
       "clips": ["123", "456", "789", "101112", "131415"]
     },
     "2": {

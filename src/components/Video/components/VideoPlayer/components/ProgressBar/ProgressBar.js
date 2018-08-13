@@ -1,4 +1,6 @@
 import React from 'react'
+import { number, func } from 'prop-types'
+
 import './ProgressBar.css'
 
 const ProgressBar = (props) => (
@@ -12,5 +14,11 @@ const ProgressBar = (props) => (
     />
   </div>
 )
+
+ProgressBar.propTypes = {
+  duration: number,
+  value: number,
+  handleProgressChange: func
+}
 
 export default ProgressBar

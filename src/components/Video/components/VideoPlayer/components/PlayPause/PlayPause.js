@@ -1,4 +1,5 @@
 import React from 'react'
+import { func, bool } from 'prop-types'
 
 import PlayIcon from '../../../../../common/Icon/Play'
 import PauseIcon from '../../../../../common/Icon/Pause'
@@ -22,5 +23,10 @@ const PlayPause = (props) => (
     }
   </div>
 )
+
+PlayPause.propTypes = {
+  handleClick: func,
+  pause: bool
+}
 
 export default PlayPause

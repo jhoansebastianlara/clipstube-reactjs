@@ -30,10 +30,10 @@ const data = (state = initialState, action) => {
       const playlist = {...state.playlist}
       const clips = {...state.clips}
       const {data} = action.payload
-      const fitstVideoClipId = Date.now()
+      const fitstVideoClipId = Date.now().toString()
       let video = {
         ...data,
-        id: Date.now(),
+        id: Date.now().toString(),
         clips: [fitstVideoClipId]
       }
       let playlistArray
@@ -82,7 +82,7 @@ const data = (state = initialState, action) => {
       const {data} = action.payload
       const videoClip = {
         ...data,
-        id: Date.now()
+        id: Date.now().toString()
       }
       let videoClips
       // create clip

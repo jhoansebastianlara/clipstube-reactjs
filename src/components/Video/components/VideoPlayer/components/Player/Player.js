@@ -1,9 +1,28 @@
 import React, { Component } from 'react'
+import { func, bool, string } from 'prop-types'
+
 import './Player.css'
 
 class Player extends Component {
   state = {
     video: null
+  }
+
+  static propTypes = {
+    handleLoadedMetadata: func.isRequired,
+    handleTimeUpdate: func,
+    handleSeeking: func,
+    handleSeeked: func,
+    handlePause: func,
+    autoplay: bool,
+    pause: bool,
+    src: string
+  }
+
+  static defaultProps = {
+    autoplay: true,
+    pause: true,
+    src: ''
   }
 
   togglePlay() {

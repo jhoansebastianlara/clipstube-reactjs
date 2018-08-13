@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -8,6 +9,10 @@ import Clip from './Clip'
 class ClipContainer extends Component {
   state = {
     modalVideoFormId: 'modalClipFormVisible'
+  }
+
+  static propTypes = {
+    id: string.isRequired
   }
 
   handleEditClick = () => {

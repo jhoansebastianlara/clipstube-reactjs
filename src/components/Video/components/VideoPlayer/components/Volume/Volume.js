@@ -1,4 +1,6 @@
 import React from 'react'
+import { func } from 'prop-types'
+
 import VolumeIcon from '../../../../../common/Icon/Volume'
 import './Volume.css'
 
@@ -21,5 +23,9 @@ const Volume = (props) => (
     </div>
   </button>
 )
+
+Volume.propTypes = {
+  handleVolumeChange: func
+}
 
 export default Volume

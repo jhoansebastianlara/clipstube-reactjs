@@ -1,4 +1,6 @@
 import React from 'react'
+import { bool } from 'prop-types'
+
 import './Spinner.css'
 
 const Spinner = (props) => {
@@ -8,6 +10,10 @@ const Spinner = (props) => {
       <span>Loading...</span>
     </div>
   )
+}
+
+Spinner.propTypes = {
+  active: bool
 }
 
 export default Spinner

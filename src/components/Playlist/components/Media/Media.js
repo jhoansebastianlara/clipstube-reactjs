@@ -1,12 +1,24 @@
 import React, { PureComponent } from 'react'
 import { NavLink } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import {string} from 'prop-types'
 
 import { getDynamicAvatar } from '../../../../helpers'
 import PlayIcon from '../../../common/Icon/Play'
 import './Media.css'
 
 class Media extends PureComponent {
+  static propTypes = {
+    id: string.isRequired,
+    title: string.isRequired,
+    cover: string
+  }
+
+  static defaultProps = {
+    id: '',
+    title: '',
+    cover: ''
+  }
+
   render () {
     return (
       <NavLink
@@ -29,11 +41,6 @@ class Media extends PureComponent {
       </NavLink>
     )
   }
-}
-
-Media.propTypes = {
-  cover: PropTypes.string,
-  title: PropTypes.string.isRequired
 }
 
 export default Media

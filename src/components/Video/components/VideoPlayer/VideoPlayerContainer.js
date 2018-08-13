@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { object, bool } from 'prop-types'
 
 import VideoPlayer from './VideoPlayer'
 import Player from './components/Player'
@@ -17,6 +18,18 @@ class VideoPlayerContainter extends Component {
     duration: 0,
     currentTime: 0,
     loading: false
+  }
+
+  static propTypes = {
+    data: object.isRequired,
+    videoClip: object,
+    autoplay: bool
+  }
+
+  static defaultProps = {
+    data: {},
+    videoClip: {},
+    autoplay: true
   }
 
   togglePlay = (event) => {

@@ -1,4 +1,6 @@
 import React from 'react'
+import { string } from 'prop-types'
+
 import './Title.css'
 
 const Title = (props) => (
@@ -6,5 +8,9 @@ const Title = (props) => (
     <h2>{props.title}</h2>
   </div>
 )
+
+Title.propTypes = {
+  title: string
+}
 
 export default Title

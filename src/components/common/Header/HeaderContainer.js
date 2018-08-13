@@ -3,12 +3,12 @@ import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 
-import * as actions from '../../actions'
+import * as actions from '../../../actions'
 import Header from './Header'
 import Search from './components/Search'
-import ModalPortal from '../common/Modal/ModalPortal'
-import Modal from '../common/Modal'
-import VideoForm from '../VideoForm'
+import ModalPortal from '../../common/Modal/ModalPortal'
+import Modal from '../../common/Modal'
+import VideoForm from '../../VideoForm'
 
 class HeaderContainter extends Component {
   state = {

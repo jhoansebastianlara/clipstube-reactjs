@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { string, func } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -12,6 +13,15 @@ class ClipFormContainer extends Component {
     endTime: '',
     videoId: this.props.videoId,
     ...this.props.data
+  }
+
+  static propTypes = {
+    videoId: string.isRequired,
+    onFormSubmitted: func
+  }
+
+  static defaultProps = {
+    onFormSubmitted: () => {}
   }
 
   handleSubmit = event => {

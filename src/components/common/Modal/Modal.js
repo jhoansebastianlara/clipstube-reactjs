@@ -1,19 +1,32 @@
-import React from 'react'
+import React, { Component} from 'react'
+import { func, string } from 'prop-types'
+
 import './Modal.css'
 
-const Modal = (props) => {
-  const modalClassName = props.modalClassName || 'Modal-medium'
-  return (
-    <div className="Modal-container">
-      <div className={"Modal " + modalClassName}>
-        {props.children}
-        <button
-          onClick={props.handleCloseClick}
-          className="Modal-close"
-        />
+class Modal extends Component {
+  static propTypes = {
+    handleCloseClick: func,
+    modalClassName: string
+  }
+
+  static defaultProps = {
+    handleCloseClick: () => {},
+    modalClassName: 'Modal-medium'
+  }
+
+  render() {
+    return (
+      <div className="Modal-container">
+        <div className={"Modal " + this.props.modalClassName}>
+          {this.props.children}
+          <button
+            onClick={this.props.handleCloseClick}
+            className="Modal-close"
+          />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default Modal
