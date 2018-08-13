@@ -1,4 +1,5 @@
 import React from 'react'
+
 import VideoClips from './VideoClips'
 import ClipsHeader from './components/ClipsHeader'
 import Clip from './components/Clip'

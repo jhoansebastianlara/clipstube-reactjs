@@ -1,5 +1,6 @@
 import {
   SEARCH_VIDEOS,
+  CREATE_VIDEO,
   GET_VIDEO,
   CREATE_VIDEO_CLIP,
   UPDATE_VIDEO_CLIP,
@@ -14,6 +15,15 @@ export const searchVideos = (searchText) => {
     type: SEARCH_VIDEOS,
     payload: {
       searchText
+    }
+  }
+}
+
+export const createVideo = (data) => {
+  return {
+    type: CREATE_VIDEO,
+    payload: {
+      data
     }
   }
 }

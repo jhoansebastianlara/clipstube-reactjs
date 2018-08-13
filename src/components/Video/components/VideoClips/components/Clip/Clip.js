@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { NavLink } from 'react-router-dom'
-// import PropTypes from 'prop-types'
+
 import { getDynamicAvatar } from '../../../../../../helpers'
 import PlayIcon from '../../../../../common/Icon/Play'
 import RemoveIcon from '../../../../../common/Icon/Remove'
@@ -34,16 +34,21 @@ class Clip extends PureComponent {
           </div>
         </NavLink>
         <div className="Clip-options">
-          <button
-            onClick={this.props.handleRemove}
-          >
-            <RemoveIcon size={20} color="gray" />
-          </button>
-          <button
-            onClick={this.props.handleEdit}
-          >
-            <EditIcon size={20} color="gray" />
-          </button>
+          {
+            !this.props.original &&
+            <React.Fragment>
+            <button
+              onClick={this.props.handleRemove}
+              >
+              <RemoveIcon size={20} color="gray" />
+            </button>
+            <button
+              onClick={this.props.handleEdit}
+              >
+                <EditIcon size={20} color="gray" />
+            </button>
+            </React.Fragment>
+          }
         </div>
       </div>
     )

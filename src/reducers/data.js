@@ -1,4 +1,5 @@
 import {
+  CREATE_VIDEO,
   GET_VIDEO,
   CREATE_VIDEO_CLIP,
   UPDATE_VIDEO_CLIP,
@@ -25,6 +26,40 @@ const initialState = {
 
 const data = (state = initialState, action) => {
   switch (action.type) {
+    case CREATE_VIDEO: {
+      const playlist = {...state.playlist}
+      const clips = {...state.clips}
+      const {data} = action.payload
+      const fitstVideoClipId = Date.now()
+      let video = {
+        ...data,
+        id: Date.now(),
+        clips: [fitstVideoClipId]
+      }
+      let playlistArray
+      let firstVideoClip
+
+      // first videoclip should be the original video
+      firstVideoClip = {
+        id: fitstVideoClipId,
+        videoId: video.id,
+        name: 'ORIGINAL',
+        startTime: null,
+        endTime: null,
+        original: true
+      }
+
+      playlist[video.id] = video
+      clips[fitstVideoClipId] = firstVideoClip
+      playlistArray = Object.keys(playlist).map(key => playlist[key])
+
+      return {
+        ...state,
+        playlist,
+        clips,
+        playlistArray
+      }
+    }
     case GET_VIDEO: {
       const {videoId} = action.payload
       const video = state.playlist[videoId]

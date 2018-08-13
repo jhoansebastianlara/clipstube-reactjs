@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import queryString from 'query-string'
+
 import * as actions from '../../actions'
 import Video from './Video'
 import VideoPlayer from './components/VideoPlayer'

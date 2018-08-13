@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import VideoPlayer from './VideoPlayer'
 import Player from './components/Player'
 import Title from './components/Title'
@@ -95,11 +96,12 @@ class VideoPlayerContainter extends Component {
     let videoSrc = this.props.data.src
 
     // if there is videoClip, so load it's data
-    if (videoClip.id) {
+    if (videoClip.name) {
       title += ` [${videoClip.name}]`
+    }
+    if (videoClip.startTime && videoClip.endTime) {
       videoSrc += `#t=${videoClip.startTime},${videoClip.endTime}`
     }
-
     return (
       <VideoPlayer
         setRef={this.setRef}

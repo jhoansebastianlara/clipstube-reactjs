@@ -1,4 +1,5 @@
 export const SEARCH_VIDEOS = 'SEARCH_VIDEOS'
+export const CREATE_VIDEO = 'CREATE_VIDEO'
 export const GET_VIDEO = 'GET_VIDEO'
 export const CREATE_VIDEO_CLIP = 'CREATE_VIDEO_CLIP'
 export const UPDATE_VIDEO_CLIP = 'UPDATE_VIDEO_CLIP'

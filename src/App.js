@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
+
 import './styles/App.css'
-// components
 import ErrorBoundary from './components/ErrorBoundary'
 import Header from './components/Header'
 import Home from './components/Home'

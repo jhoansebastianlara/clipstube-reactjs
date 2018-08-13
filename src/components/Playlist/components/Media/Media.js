@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
+
 import { getDynamicAvatar } from '../../../../helpers'
 import PlayIcon from '../../../common/Icon/Play'
 import './Media.css'

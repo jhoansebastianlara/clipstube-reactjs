@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import * as actions from '../../actions'
 import VideoForm from './VideoForm'
 
 class VideoFormContainer extends Component {
   state = {
-    url: '',
+    src: '',
     title: ''
   }
 
@@ -15,6 +18,8 @@ class VideoFormContainer extends Component {
 
   saveForm = () => {
     console.log(this.state)
+    this.props.actions.createVideo(this.state)
+    this.props.onFormSubmitted()
   }
 
   handleInputChange = (event) => {
@@ -41,4 +46,8 @@ class VideoFormContainer extends Component {
   }
 }
 
-export default connect()(VideoFormContainer)
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(actions, dispatch)
+})
+
+export default connect(null, mapDispatchToProps)(VideoFormContainer)

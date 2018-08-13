@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
+
 import * as actions from '../../actions'
 import Header from './Header'
 import Search from './components/Search'
@@ -48,7 +49,9 @@ class HeaderContainter extends Component {
               <Modal
                 handleCloseClick={this.handleCloseModal}
               >
-                <VideoForm />
+                <VideoForm
+                  onFormSubmitted={this.handleCloseModal}
+                />
               </Modal>
             </ModalPortal>
           }
