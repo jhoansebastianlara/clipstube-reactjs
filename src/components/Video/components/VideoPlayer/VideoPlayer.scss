@@ -1,6 +1,19 @@
+@import "styles/variables";
+
 .VideoPlayer {
   grid-template: videoplayer;
   position: relative;
   width: 100%;
   background: black;
+  height: 24rem;
+  border: 1px solid purple;
+  margin-bottom: 3rem;
+
+  @media screen and (max-width: 1000px) {
+    height: 20rem;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    height: max-content;
+  }
 }

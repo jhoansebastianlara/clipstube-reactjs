@@ -5,23 +5,16 @@ import VideoForm from './VideoForm'
 class VideoFormContainer extends Component {
   state = {
     url: '',
-    title: '',
-    loading: false
+    title: ''
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    this.setState({
-      loading: true
-    }, this.saveForm)
+    this.saveForm()
   }
 
   saveForm = () => {
-    setTimeout(() => {
-      this.setState({
-        loading: false
-      })
-    }, 3000)
+    console.log(this.state)
   }
 
   handleInputChange = (event) => {
@@ -42,9 +35,7 @@ class VideoFormContainer extends Component {
       <VideoForm
         handleSubmit={this.handleSubmit}
         handleInputChange={this.handleInputChange}
-        titleValue={this.state.title}
-        urlValue={this.state.url}
-        loading={this.state.loading}
+        formData={this.state}
       />
     )
   }

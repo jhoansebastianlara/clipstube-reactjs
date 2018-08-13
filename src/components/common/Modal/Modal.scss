@@ -10,10 +10,19 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  z-index: 9999;
+}
+
+.Modal-medium {
+  max-width: $break-medium;
+}
+
+.Modal-small {
+  max-width: $break-small;
 }
 
 .Modal {
-  max-width: $break-medium;
+  // max-width: $break-medium;
   width: 90%;
   top: 6rem;
   background:  white;
@@ -30,7 +39,7 @@
     top: -1rem;
     border-radius: 50%;
     border: none;
-    background: #171c30;
+    background: color(secondary);
     color: white;
     cursor: pointer;
   }

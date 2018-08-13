@@ -6,16 +6,18 @@
   grid-template-areas: "videoplayer videoclips";
   grid-gap: 1rem 2rem;
   margin-left: 1.5rem;
-  margin-right: 1.5rem; 
+  margin-right: 1.5rem;
 
   @media screen and (max-width: $break-medium) {
-    grid-template-columns: 1fr minmax(8rem, 45vw);
+    grid-template-areas: "videoplayer"
+                         "videoclips";
+    grid-template-columns: 1fr;
     grid-gap: 1rem .5rem;
   }
 
   @media screen and (max-width: $break-small) {
-    grid-template-columns: 1fr;
     grid-template-areas: "videoplayer"
                          "videoclips";
+    grid-template-columns: 1fr;
   }
 }

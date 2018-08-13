@@ -8,6 +8,10 @@ import VideoPlayer from './components/VideoPlayer'
 import VideoClips from './components/VideoClips'
 
 class VideoContainter extends Component {
+  state = {
+    videoClips: this.props.video.clips || []
+  }
+
   checkIfLoadClip = (props) => {
     const search = queryString.parse(props.location.search)
     if (search && search.clip) {
@@ -28,8 +32,11 @@ class VideoContainter extends Component {
   }
 
   render () {
-    const {video, videoClip} = this.props
-    const {clips} = video
+    const {
+      video,
+      videoClips,
+      videoClip
+    } = this.props
     return (
       <Video>
         <VideoPlayer
@@ -38,7 +45,7 @@ class VideoContainter extends Component {
           videoClip={videoClip}
           />
         <VideoClips
-          clips={clips || []}
+          clips={videoClips}
         />
       </Video>
     )

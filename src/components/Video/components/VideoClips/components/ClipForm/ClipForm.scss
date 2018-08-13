@@ -1,0 +1,34 @@
+.ClipForm {
+  display: flex;
+  flex-direction: column;
+
+  .ClipForm-title {
+    margin: 0;
+    align-self: center;
+  }
+
+  .ClipForm-time-container {
+    display: flex;
+
+    .time-input {
+      width: 7rem;
+    }
+    
+    & :first-child {
+      padding-right: 1rem;
+    }
+  }
+
+  label {
+    color: gray;
+    font-family: 'robotolight';
+
+    input {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .ClipForm-submit-button {
+    align-self: center;
+  }
+}

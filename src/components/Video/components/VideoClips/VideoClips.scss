@@ -1,4 +1,25 @@
+@import "styles/variables";
+
 .VideoClips {
   grid-area: videoclips;
   background: #F5F5F5;
+  overflow: hidden;
+  height: 24rem;
+  padding-bottom: 3.5rem;
+
+  @media screen and (max-width: 1000px) {
+    height: 20rem;
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (max-width: $break-small) {
+    // height: 20rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .Clips-container {
+    height: 100%;
+    overflow: auto;
+  }
 }

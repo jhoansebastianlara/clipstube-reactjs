@@ -3,14 +3,15 @@
     "1": {
       "id": "1",
       "title": "Sintel Trailer",
-      "src": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
-      "clips": ["123", "456"]
+      "src": "http://mazwai.com/system/posts/videos/000/000/225/original/andrew-arthur-breese_boneyard-raw-broll.mp4",
+      "src2": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      "clips": ["123", "456", "789", "101112", "131415"]
     },
     "2": {
       "id": "2",
       "title": "OMOTE",
       "src": "http://mazwai.com/system/posts/videos/000/000/229/original/omote_iceland__an_iceland_venture.mp4",
-      "clips": ["789"]
+      "clips": []
     }
   },
   "clips": {
@@ -26,15 +27,28 @@
       "videoId": "1",
       "name": "clip uno [part 2]",
       "startTime": "00:00:20",
-      "endTime": "00:00:25",
-      "current": true
+      "endTime": "00:00:25"
     },
     "789": {
       "id": "789",
-      "videoId": "2",
+      "videoId": "1",
       "name": "testing",
       "startTime": "00:00:12",
       "endTime": "00:00:18"
+    },
+    "101112": {
+      "id": "101112",
+      "videoId": "1",
+      "name": "Ok",
+      "startTime": "00:00:20",
+      "endTime": "00:00:22"
+    },
+    "131415": {
+      "id": "131415",
+      "videoId": "1",
+      "name": "Last part",
+      "startTime": "00:00:40",
+      "endTime": "00:00:43"
     }
   }
 }

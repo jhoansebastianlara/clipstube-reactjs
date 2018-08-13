@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
 
-function Header(props) {
+const Header = (props) => {
   return (
     <div className="Header">
       {props.children}

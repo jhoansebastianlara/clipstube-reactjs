@@ -1,0 +1,15 @@
+.ClipsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  padding-left: 1rem;
+  background: #EEEEEE;
+  height: 3.5rem;
+
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+}

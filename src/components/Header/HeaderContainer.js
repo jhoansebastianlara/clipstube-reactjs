@@ -10,14 +10,16 @@ import Modal from '../common/Modal'
 import VideoForm from '../VideoForm'
 
 class HeaderContainter extends Component {
-  state = {}
+  state = {
+    modalVideoFormId: 'modalVideoFormVisible'
+  }
 
   handleOpenModal = () => {
-    this.props.actions.openModal()
+    this.props.actions.openModal(this.state.modalVideoFormId)
   }
 
   handleCloseModal = (event) => {
-    this.props.actions.closeModal()
+    this.props.actions.closeModal(this.state.modalVideoFormId)
   }
 
   render () {
@@ -38,13 +40,13 @@ class HeaderContainter extends Component {
             className="btn-small"
             onClick={this.handleOpenModal}
           >
-            New
+            New Video
           </button>
           {
-            this.props.modalVisible &&
+            this.props.modalVideoFormVisible &&
             <ModalPortal>
               <Modal
-                handleClick={this.handleCloseModal}
+                handleCloseClick={this.handleCloseModal}
               >
                 <VideoForm />
               </Modal>
@@ -58,7 +60,7 @@ class HeaderContainter extends Component {
 
 const mapStateToProps = (state, props) => {
   return {
-    modalVisible: state.modal.visibility
+    modalVideoFormVisible: state.modal.modalVideoFormVisible
   }
 }
 

@@ -3,14 +3,20 @@ $backgroud-current: rgba(0, 0, 0, .1);
 .Clip {
   padding: .4rem;
   display: grid;
-  grid-template-columns: 2rem minmax(3rem, 5rem) auto 2rem;
+  grid-template-columns: auto 2rem;
   grid-column-gap: .5rem;
   cursor: pointer;
-  text-decoration: none;
-  color: black;
 
   &:hover {
     background: $backgroud-current;
+  }
+
+  .Clip-body {
+    display: grid;
+    grid-template-columns: 2rem minmax(3rem, 5rem) 1fr;
+    grid-column-gap: .5rem;
+    text-decoration: none;
+    color: black;
   }
 
   .Clip-current-indicator {
@@ -28,7 +34,7 @@ $backgroud-current: rgba(0, 0, 0, .1);
     vertical-align: top;
   }
 
-  .Clip-body {
+  .Clip-details {
     .Clip-name {
       display: block;
       margin: 0 0 .2rem 0;
@@ -36,7 +42,6 @@ $backgroud-current: rgba(0, 0, 0, .1);
       overflow: hidden;
       font-size: 1.1rem;
       line-height: 1.2rem;
-
     }
 
     .Clip-time {
@@ -50,6 +55,8 @@ $backgroud-current: rgba(0, 0, 0, .1);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 10;
 
     button {
       background: transparent;

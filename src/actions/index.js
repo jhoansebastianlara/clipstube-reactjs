@@ -1,6 +1,9 @@
 import {
   SEARCH_VIDEOS,
   GET_VIDEO,
+  CREATE_VIDEO_CLIP,
+  UPDATE_VIDEO_CLIP,
+  REMOVE_VIDEO_CLIP,
   GET_VIDEO_CLIP,
   OPEN_MODAL,
   CLOSE_MODAL
@@ -24,6 +27,33 @@ export const getVideo = (videoId) => {
   }
 }
 
+export const createVideoClip = (data) => {
+  return {
+    type: CREATE_VIDEO_CLIP,
+    payload: {
+      data
+    }
+  }
+}
+
+export const updateVideoClip = (data) => {
+  return {
+    type: UPDATE_VIDEO_CLIP,
+    payload: {
+      data
+    }
+  }
+}
+
+export const removeVideoClip = (clipId) => {
+  return {
+    type: REMOVE_VIDEO_CLIP,
+    payload: {
+      clipId
+    }
+  }
+}
+
 export const getVideoClip = (clipId) => {
   return {
     type: GET_VIDEO_CLIP,
@@ -33,14 +63,21 @@ export const getVideoClip = (clipId) => {
   }
 }
 
-export const openModal = () => {
+export const openModal = (modalId, data = null) => {
   return {
-    type: OPEN_MODAL
+    type: OPEN_MODAL,
+    payload: {
+      modalId,
+      data
+    }
   }
 }
 
-export const closeModal = () => {
+export const closeModal = (modalId) => {
   return {
-    type: CLOSE_MODAL
+    type: CLOSE_MODAL,
+    payload: {
+      modalId
+    }
   }
 }

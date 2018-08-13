@@ -18,7 +18,7 @@ const VideoForm = (props) => {
           name="title"
           autoComplete="off"
           onChange={props.handleInputChange}
-          value={props.titleValue}
+          value={props.formData.title}
         />
       </label>
       <label htmlFor="url">
@@ -30,14 +30,13 @@ const VideoForm = (props) => {
           name="url"
           autoComplete="off"
           onChange={props.handleInputChange}
-          value={props.url}
+          value={props.formData.url}
         />
       </label>
 
       <button
         type="submit"
         className="btn-small VideoForm-submit-button"
-        disabled={props.loading}
       >
         Save
       </button>
