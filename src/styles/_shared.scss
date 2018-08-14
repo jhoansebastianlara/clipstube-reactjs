@@ -40,3 +40,14 @@
   border: 1px solid #d6e6f2;
   font-weight: 300;
 }
+
+.not-data-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+
+  h3 {
+    color: color(secondary);
+  }
+}

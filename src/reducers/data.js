@@ -34,7 +34,8 @@ const data = (state = initialState, action) => {
       let video = {
         ...data,
         id: Date.now().toString(),
-        clips: [fitstVideoClipId]
+        clips: [fitstVideoClipId],
+        clipOriginalId: fitstVideoClipId
       }
       let playlistArray
       let firstVideoClip
@@ -60,11 +61,12 @@ const data = (state = initialState, action) => {
         playlistArray
       }
     }
+
     case GET_VIDEO: {
       const {videoId} = action.payload
       const video = state.playlist[videoId]
-      const videoClips = video.clips
       const videoNotFound = !video
+      const videoClips = videoNotFound ? [] : video.clips
 
       return {
         ...state,
@@ -75,6 +77,7 @@ const data = (state = initialState, action) => {
         videoClipNotFound: false
       }
     }
+
     case CREATE_VIDEO_CLIP: {
       const clips = {...state.clips}
       const playlist = {...state.playlist}
@@ -149,7 +152,7 @@ const data = (state = initialState, action) => {
 
     case GET_VIDEO_CLIP: {
       const {clipId} = action.payload
-      const videoClip = state.clips[clipId]
+      const videoClip = {...state.clips[clipId]}
       const videoClipNotFound = !videoClip
 
       return {
@@ -158,6 +161,7 @@ const data = (state = initialState, action) => {
         videoClipNotFound
       }
     }
+
     case SEARCH_VIDEOS: {
       const {searchText} = action.payload
       let searchResults = []

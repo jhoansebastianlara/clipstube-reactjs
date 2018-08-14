@@ -22,7 +22,7 @@ class Media extends PureComponent {
   render () {
     return (
       <NavLink
-        to={`/watch/${this.props.id}`}
+        to={`/watch/${this.props.id}?clip=${this.props.clipOriginalId}`}
         className="Media"
       >
         <div className="Media-overlay">

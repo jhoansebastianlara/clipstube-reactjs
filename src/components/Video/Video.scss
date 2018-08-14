@@ -20,4 +20,28 @@
                          "videoclips";
     grid-template-columns: 1fr;
   }
+
+  .shortcuts-container {
+    margin: 2rem 0;
+    color: gray;
+
+    .shortcuts-title {
+      // font-family: 'robotomedium';
+    }
+
+    .shortcuts {
+      font-family: 'robotolight';
+      display: flex;
+      flex-direction: column;
+      padding-left: 1rem;
+
+      .shortcuts-item {
+
+      }
+
+      .shortcuts-key {
+        font-family: 'robotobold';
+      }
+    }
+  }
 }

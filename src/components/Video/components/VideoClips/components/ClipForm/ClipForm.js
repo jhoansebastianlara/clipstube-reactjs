@@ -1,4 +1,6 @@
 import React from 'react'
+import { object, func } from 'prop-types'
+
 import './ClipForm.css'
 
 const ClipForm = (props) => {
@@ -21,6 +23,8 @@ const ClipForm = (props) => {
           autoComplete="off"
           onChange={props.handleInputChange}
           value={props.formData.name || props.clipData.name || ''}
+          maxLength={100}
+          required
         />
       </label>
       <div className="ClipForm-time-container">
@@ -35,6 +39,10 @@ const ClipForm = (props) => {
             autoComplete="off"
             onChange={props.handleInputChange}
             value={props.formData.startTime || props.clipData.startTime || ''}
+            pattern="[0-5][0-9]:[0-5][0-9]:[0-5][0-9]"
+            title="HH:MM:SS"
+            maxLength={8}
+            required
           />
         </label>
         <label htmlFor="endTime">
@@ -47,7 +55,12 @@ const ClipForm = (props) => {
             name="endTime"
             autoComplete="off"
             onChange={props.handleInputChange}
+            onBlur={props.onBlurInputTime}
             value={props.formData.endTime || props.clipData.endTime || ''}
+            pattern="[0-5][0-9]:[0-5][0-9]:[0-5][0-9]"
+            title="HH:MM:SS"
+            maxLength={8}
+            required
           />
         </label>
       </div>
@@ -61,6 +74,14 @@ const ClipForm = (props) => {
       </button>
     </form>
   )
+}
+
+ClipForm.propTypes = {
+  handleSubmit: func,
+  handleInputChange: func,
+  onBlurInputTime: func,
+  formData: object,
+  clipData: object
 }
 
 export default ClipForm

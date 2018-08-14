@@ -8,6 +8,7 @@ const modal = (state = initialState, action) => {
   switch (action.type) {
     case OPEN_MODAL: {
       const {modalId, data} = action.payload
+      console.log(state)
       return {
         ...state,
         [modalId]: true,

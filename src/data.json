@@ -4,23 +4,32 @@
       "id": "1",
       "title": "Sintel Trailer",
       "src": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
-      "src2": "http://mazwai.com/system/posts/videos/000/000/225/original/andrew-arthur-breese_boneyard-raw-broll.mp4",
-      "clips": ["123", "456", "789", "101112", "131415"]
+      "clips": ["123", "456", "789", "101112", "131415"],
+      "clipOriginalId": "123"
     },
     "2": {
       "id": "2",
       "title": "OMOTE",
       "src": "http://mazwai.com/system/posts/videos/000/000/229/original/omote_iceland__an_iceland_venture.mp4",
-      "clips": []
+      "clips": ["161718", "192021"],
+      "clipOriginalId": "161718"
+    },
+    "3": {
+      "id": "3",
+      "title": "ARTHUR",
+      "src": "http://mazwai.com/system/posts/videos/000/000/161/original/leonard_soosay--missfit.mp4",
+      "clips": ["222324"],
+      "clipOriginalId": "222324"
     }
   },
   "clips": {
     "123": {
       "id": "123",
       "videoId": "1",
-      "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      "startTime": "00:00:10",
-      "endTime": "00:00:15"
+      "name": "ORIGINAL",
+      "startTime": null,
+      "endTime": null,
+      "original": true
     },
     "456": {
       "id": "456",
@@ -32,7 +41,7 @@
     "789": {
       "id": "789",
       "videoId": "1",
-      "name": "testing",
+      "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "startTime": "00:00:12",
       "endTime": "00:00:18"
     },
@@ -49,6 +58,29 @@
       "name": "Last part",
       "startTime": "00:00:40",
       "endTime": "00:00:43"
+    },
+    "161718": {
+      "id": "161718",
+      "videoId": "2",
+      "name": "ORIGINAL",
+      "startTime": null,
+      "endTime": null,
+      "original": true
+    },
+    "192021": {
+      "id": "192021",
+      "videoId": "2",
+      "name": "Cool part",
+      "startTime": "00:00:10",
+      "endTime": "00:00:22"
+    },
+    "222324": {
+      "id": "222324",
+      "videoId": "3",
+      "name": "ORIGINAL",
+      "startTime": null,
+      "endTime": null,
+      "original": true
     }
   }
 }

@@ -19,18 +19,21 @@ const VideoForm = (props) => {
           autoComplete="off"
           onChange={props.handleInputChange}
           value={props.formData.title}
+          required
         />
       </label>
       <label htmlFor="src">
         Video URL:
         <input
-          type="text"
+          type="url"
           placeholder="i.e http://example.com/videos/video.mp4"
           className="input-default"
           name="src"
           autoComplete="off"
           onChange={props.handleInputChange}
           value={props.formData.src}
+          title="Your video's url"
+          required
         />
       </label>
 

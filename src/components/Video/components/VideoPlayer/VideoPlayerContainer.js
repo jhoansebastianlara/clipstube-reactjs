@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { object, bool } from 'prop-types'
+import { object, bool, func } from 'prop-types'
 
+import { convertTimeFormattedToSeconds } from '../../../../helpers'
 import VideoPlayer from './VideoPlayer'
 import Player from './components/Player'
 import Title from './components/Title'
@@ -23,13 +24,15 @@ class VideoPlayerContainter extends Component {
   static propTypes = {
     data: object.isRequired,
     videoClip: object,
-    autoplay: bool
+    autoplay: bool,
+    onVideoClipFinish: func
   }
 
   static defaultProps = {
     data: {},
     videoClip: {},
-    autoplay: true
+    autoplay: true,
+    onVideoClipFinish: () => {}
   }
 
   togglePlay = (event) => {
@@ -64,7 +67,20 @@ class VideoPlayerContainter extends Component {
     })
   }
 
+  validateIfFramgentFinished = () => {
+    const {endTime, id} = this.props.videoClip
+    if (endTime) {
+      const endTimeSeconds = convertTimeFormattedToSeconds(endTime)
+      // checks if the videoClip finish
+      if (Math.floor(this.state.currentTime) === endTimeSeconds) {
+        // fragment finish
+        this.props.onVideoClipFinish(id)
+      }
+    }
+  }
+
   handlePause = event => {
+    this.validateIfFramgentFinished()
     this.setState({
       pause: true
     })

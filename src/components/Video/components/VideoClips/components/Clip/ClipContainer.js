@@ -39,11 +39,16 @@ class ClipContainer extends Component {
 }
 
 const mapStateToProps = (state, props) => {
-  const {videoClip} = state.data
-  const clipId = videoClip.id
+  const {videoClip, video} = state.data
+  let clipId = videoClip.id
+
+  // if there is no a videoclip running so original is running
+  if (!videoClip.id && video.id) {
+    clipId = video.clipOriginalId
+  }
   return {
     data: props.id ? state.data.clips[props.id] : {},
-    current: clipId === props.id
+    current: clipId === props.id,
   }
 }
 
