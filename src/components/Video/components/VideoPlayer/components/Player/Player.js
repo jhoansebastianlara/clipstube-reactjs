@@ -14,6 +14,7 @@ class Player extends Component {
     handleSeeking: func,
     handleSeeked: func,
     handlePause: func,
+    handleError: func,
     autoplay: bool,
     pause: bool,
     src: string
@@ -50,7 +51,8 @@ class Player extends Component {
       handleTimeUpdate,
       handleSeeking,
       handleSeeked,
-      handlePause
+      handlePause,
+      handleError
     } = this.props
     return (
       <div className="Player">
@@ -63,6 +65,7 @@ class Player extends Component {
           onSeeking={handleSeeking}
           onSeeked={handleSeeked}
           onPause={handlePause}
+          onError={handleError}
         />
       </div>
     )

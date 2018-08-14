@@ -17,7 +17,6 @@ class VideoFormContainer extends Component {
   }
 
   saveForm = () => {
-    console.log(this.state)
     this.props.actions.createVideo(this.state)
     this.props.onFormSubmitted()
   }

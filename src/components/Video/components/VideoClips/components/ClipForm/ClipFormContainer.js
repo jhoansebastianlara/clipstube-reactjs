@@ -26,7 +26,6 @@ class ClipFormContainer extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log('submitt')
     this.saveForm()
   }
 
@@ -50,9 +49,8 @@ class ClipFormContainer extends Component {
   }
 
   onBlurInputTime = (event) => {
-    const target = event.target
-    const name = target.name
-    console.log('onBlurInputTime: ', target + ' - ', name)
+    // const target = event.target
+    // const name = target.name
   }
 
   setInputRef = element => {

@@ -86,6 +86,11 @@ class VideoPlayerContainter extends Component {
     })
   }
 
+  handleError = e => {
+    // todo: improve this handler
+    alert('We could not play this video :(')
+  }
+
   handleProgressChange = event => {
     this.video.currentTime = event.target.value
   }
@@ -169,6 +174,7 @@ class VideoPlayerContainter extends Component {
           handleSeeking={this.handleSeeking}
           handleSeeked={this.handleSeeked}
           handlePause={this.handlePause}
+          handleError={this.handleError}
           src={videoSrc}
         />
 
