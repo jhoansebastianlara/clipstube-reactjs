@@ -18,7 +18,7 @@
       "id": "3",
       "title": "ARTHUR",
       "src": "http://mazwai.com/system/posts/videos/000/000/161/original/leonard_soosay--missfit.mp4",
-      "clips": ["222324"],
+      "clips": ["222324", "252627"],
       "clipOriginalId": "222324"
     }
   },
@@ -81,6 +81,13 @@
       "startTime": null,
       "endTime": null,
       "original": true
+    },
+    "252627": {
+      "id": "252627",
+      "videoId": "3",
+      "name": "Intro",
+      "startTime": "00:00:10",
+      "endTime": "00:00:15"
     }
   }
 }
