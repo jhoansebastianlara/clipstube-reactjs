@@ -2,8 +2,6 @@
 
 This app allows you to slice up a video into clips.
 
-See it running: [DEMO](http://138.68.9.12:5000/)
-
 ![alt text](https://github.com/jhoansebastianlara/clipstube-reactjs/blob/master/clipstube.demo.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
