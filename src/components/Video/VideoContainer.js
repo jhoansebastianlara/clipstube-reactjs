@@ -138,7 +138,7 @@ class VideoContainter extends Component {
               <span className="shortcuts-key">J</span>: Previous clip
             </span>
             <span className="shortcuts-item">
-              <span className="shortcuts-key">N</span>: Next clip
+              <span className="shortcuts-key">L</span>: Next clip
             </span>
           </div>
         </div>

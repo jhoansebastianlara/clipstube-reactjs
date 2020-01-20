@@ -48,10 +48,7 @@ class ClipFormContainer extends Component {
     })
   }
 
-  onBlurInputTime = (event) => {
-    // const target = event.target
-    // const name = target.name
-  }
+  onBlurInputTime = (event) => {}
 
   setInputRef = element => {
     this.input = element
